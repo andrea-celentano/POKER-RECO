@@ -1,0 +1,79 @@
+.sconsign.dblite
+#binaries and libraries
+lib
+bin
+*.o
+*.os
+*.so
+#Evio files - may be here for tests
+*.evio.*
+*.evio
+#Root files - may be here for tests
+*.root
+
+#compiled python
+*.pyc
+
+#ccdb file
+calib/ccdb.calib
+#IDE stuff
+.project
+.cproject
+#root Dictionary files
+*Dict*
+
+#pedestal files - don't want these on github
+calib/DAQ_pedestals/*
+#calib/DAQ_parms/*
+
+#Backups
+*~
+##Compilation stuff
+**/.Linux_x86_64-dbg/*
+**/.Linux_x86_64/*
+**/.Darwin_x86_64/*
+**/.Darwin_x86_64-dbg/*
+**/.Linux-x86_64-dbg/*
+**/.Linux-x86_64/*
+**/.Darwin-x86_64/*
+**/.Darwin-x86_64-dbg/*
+**/.Linux_x86_64-dbg
+**/.Linux_x86_64
+**/.Darwin_x86_64
+**/.Darwin_x86_64-dbg
+**/.Linux-x86_64-dbg
+**/.Linux-x86_64
+**/.Darwin-x86_64
+**/.Darwin-x86_64-dbg
+
+**/..Linux_x86_64-dbg/*
+**/..Linux_x86_64/*
+**/..Darwin_x86_64/*
+**/..Darwin_x86_64-dbg/*
+**/..Linux-x86_64-dbg/*
+**/..Linux-x86_64/*
+**/..Darwin-x86_64/*
+**/..Darwin-x86_64-dbg/*
+**/..Linux_x86_64-dbg
+**/..Linux_x86_64
+**/..Darwin_x86_64
+**/..Darwin_x86_64-dbg
+**/..Linux-x86_64-dbg
+**/..Linux-x86_64
+**/..Darwin-x86_64
+**/..Darwin-x86_64-dbg
+src/external/RootSpy/src/..Linux_x86_64/
+src/external/cMsg-3.6/src/examples/.Linux_x86_64/
+src/external/cMsg-3.6/src/execsrc/.Linux_x86_64/
+src/external/cMsg-3.6/src/test/.Linux_x86_64/
+src/external/et/src/examples/.Linux-x86_64-dbg/
+src/external/et/src/examples/.Linux_x86_64/
+src/external/et/src/execsrc/.Linux-x86_64-dbg/
+src/external/et/src/execsrc/.Linux_x86_64/
+
+#rootspy stuff
+*rootspy_macro.cc
+
+.pid
+.pydevproject
+.settings
