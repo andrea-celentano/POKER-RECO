@@ -1,0 +1,62 @@
+import os
+import sys
+import subprocess
+import glob
+
+import utils
+
+# Add SBMS directory to PYTHONPATH
+#sbmsdir = "%s/SBMS" % (os.getcwd())
+#sys.path.append(sbmsdir)
+
+#import sbms
+
+Import('env')
+
+env=env.Clone();
+
+# Get platform-specific name
+# Determine the os and machine names
+uname    = os.uname();
+platform = uname[0]
+machine  = uname[4]
+
+
+
+# Add libraries and libraries/include to include search path
+
+# Debug/optimization flags
+debugSuffix = ''
+debug = ARGUMENTS.get('debug', 0)
+if debug:
+#    debugSuffix = '-dbg'
+    # Compile with -g and add debugSuffix to all executable names
+    env.AppendUnique(CCFLAGS = '-g')
+    env.AppendUnique(CXXFLAGS = '-g')
+    env.AppendUnique(FORTRANFLAGS = '-g')
+    env.AppendUnique(PROGSUFFIX = debugSuffix)
+
+# Enable some C++11 features available in gcc4.4
+env.AppendUnique(CXXFLAGS=['-std=c++11'])
+
+# Hidden sub directory into which variant builds go
+archDir = '.' + platform + "_" + machine+ debugSuffix
+
+
+
+# Apply any platform/architecture specific settings
+# Platform dependent quantities.
+# Default to standard Linux libs.
+execLibs = ['m', 'pthread', 'dl', 'rt']
+    
+
+if platform == 'Darwin':
+    execLibs = ['pthread', 'dl']
+    #env.Append(CPPDEFINES = ['Darwin'], SHLINKFLAGS = ['-multiply_defined'])
+    env.AppendUnique(CCFLAGS = ['-fmessage-length=0'])
+
+Export('env execLibs debugSuffix')
+
+# Include SConscript in src
+SConscript('src/SConscript',variant_dir="src/.%s" % (archDir),duplicate=0)
+ 

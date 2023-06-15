@@ -1,0 +1,12 @@
+# get env object and clone it
+Import('env','execLibs','debugSuffix')
+
+thisEnv = env.Clone()
+thisEnv.AppendUnique(CPPPATH = ['.'])
+thisEnv.AppendUnique(LIBS = ['RootSpy-client'+debugSuffix,'cmsgRegex'+debugSuffix,'cmsgxx'+debugSuffix,'cmsg'+debugSuffix,'curl'] + execLibs)
+fileList  = Glob('*.cc');
+
+
+RSMonitor    = thisEnv.Program(source  = fileList,target='RSMonitor')
+thisEnv.Install(target = '#/bin/RootSpy', source = RSMonitor)
+

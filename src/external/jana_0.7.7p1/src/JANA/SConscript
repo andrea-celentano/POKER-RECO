@@ -1,0 +1,17 @@
+# get env object and clone it
+from utils import AddROOTdict
+Import('env',  'debugSuffix')
+env = env.Clone()
+
+
+#sbms.AddJANA(env)
+#sbms.library(env)
+
+env.AppendUnique(CPPPATH = ['.'])
+fileList  = Glob('*.cc');
+fileList  += Glob('*.c');
+
+#AddROOTdict(env,'.',Dir( '#/src/external/jana_0.7.7p1/src/JANA/').srcnode().abspath)
+
+env.SharedLibrary(target='#/lib/JANA'+debugSuffix,source = fileList)
+

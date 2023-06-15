@@ -1,0 +1,32 @@
+import os
+from utils import *
+
+Import('env debugSuffix')
+
+#Add JANA
+env.AppendUnique(LIBS="JANA")
+
+# Loop over plugins, building each
+subdirs = ['TestSpeed', 'janadot', 'janactl', 'jana_iotest','janaevio']
+#SConscript(dirs=subdirs, exports='env debugSuffix', duplicate=0)
+
+# Only build janarate and janaroot if ROOTSYS is set
+if os.getenv('ROOTSYS') != None :
+    subdirs += ['janaroot', 'janarate']
+#if os.getenv('ROOTSYS') != None :
+#	SConscript(dirs=['janaroot', 'janarate', 'janaview'], exports='env debugSuffix', duplicate=0)
+
+for dir in subdirs:
+    print  bcolors.OKBLUE,"Found JANA plugin ",dir,bcolors.ENDC
+    #save the relative dir and the absolute dir
+    reldir = str(dir)
+    absdir = Dir('#/src/external/jana_0.7.7p1/src/plugins/'+reldir).srcnode().abspath   
+    env_plugin=env.Clone()
+    env_plugin.Append(CPPPATH=absdir)
+           
+    #Add root dictionaries if necessary
+    AddROOTdict(env,reldir,absdir)
+    plugin_src  = Glob(reldir+'/*.cc')
+    env_plugin.SharedLibrary(source=plugin_src,target='#/lib/JANA/'+dir+debugSuffix,SHLIBPREFIX='',SHLIBSUFFIX='.so')
+          
+

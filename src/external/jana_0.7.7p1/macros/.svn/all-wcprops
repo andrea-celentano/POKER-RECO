@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/macros
+END
+run_RAM.csh
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/macros/run_RAM.csh
+END
+RAM_vs_nthreads.C
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/macros/RAM_vs_nthreads.C
+END
+StandardLabels.C
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/macros/StandardLabels.C
+END
+run_nthreads.csh
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/macros/run_nthreads.csh
+END
+rate_vs_nthreads.C
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/macros/rate_vs_nthreads.C
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/macros/README
+END

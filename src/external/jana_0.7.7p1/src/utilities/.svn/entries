@@ -1,0 +1,89 @@
+10
+
+dir
+2447
+https://phys12svn.jlab.org/repos/tags/jana_0.7.7p1/src/utilities
+https://phys12svn.jlab.org/repos
+
+
+
+2015-11-30T12:53:21.710255Z
+2376
+davidl
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+c5ed4466-e916-0410-8347-b3263e9c103d
+
+janadump
+dir
+
+jcalibcopy
+dir
+
+jcalibread
+dir
+
+jresource
+dir
+
+SConscript
+file
+
+
+
+
+2017-01-17T14:15:13.626233Z
+f83a8f6d9884d02e41ec0b489917e782
+2013-12-27T02:13:41.655000Z
+1458
+davidl
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+228
+
+jana
+dir
+
+janactl
+dir
+
+janahbook
+dir
+
+jgeomread
+dir
+
+jcalibws
+dir
+

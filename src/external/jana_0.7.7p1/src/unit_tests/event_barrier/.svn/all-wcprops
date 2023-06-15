@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/unit_tests/event_barrier
+END
+JEventSourceGenerator_EBTest.h
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/unit_tests/event_barrier/JEventSourceGenerator_EBTest.h
+END
+JEventProcessor_EBTest.h
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/unit_tests/event_barrier/JEventProcessor_EBTest.h
+END
+SConscript
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/unit_tests/event_barrier/SConscript
+END
+JEventSource_EBTest.h
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/unit_tests/event_barrier/JEventSource_EBTest.h
+END
+EB_test.cc
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/unit_tests/event_barrier/EB_test.cc
+END

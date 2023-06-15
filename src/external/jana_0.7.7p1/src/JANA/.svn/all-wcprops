@@ -1,0 +1,335 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/repos/!svn/ver/2446/tags/jana_0.7.7p1/src/JANA
+END
+JEventProcessor.cc
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/JANA/JEventProcessor.cc
+END
+JParameter.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/JANA/JParameter.h
+END
+JResourceManager.cc
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/JANA/JResourceManager.cc
+END
+JEventProcessor.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/JANA/JEventProcessor.h
+END
+JStreamLogBuffer.cc
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/JANA/JStreamLogBuffer.cc
+END
+JStreamLogBuffer.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/JANA/JStreamLogBuffer.h
+END
+jana_config.h.in
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/JANA/jana_config.h.in
+END
+jerror.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/JANA/jerror.h
+END
+JGeometry.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/JANA/JGeometry.h
+END
+JStreamLog.cc
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/JANA/JStreamLog.cc
+END
+JStreamLog.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/JANA/JStreamLog.h
+END
+JException.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/JANA/JException.h
+END
+JCalibrationGenerator.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/JANA/JCalibrationGenerator.h
+END
+force_link.cc
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/JANA/force_link.cc
+END
+make_xcode
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/JANA/make_xcode
+END
+JEventSource.cc
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/JANA/JEventSource.cc
+END
+JApplication.cc
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/JANA/JApplication.cc
+END
+JEventSourceGenerator_NULL.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/JANA/JEventSourceGenerator_NULL.h
+END
+JApplication.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/JANA/JApplication.h
+END
+JCalibrationCCDB.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/JANA/JCalibrationCCDB.h
+END
+JObject.cc
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/JANA/JObject.cc
+END
+JEventSink.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/JANA/JEventSink.h
+END
+md5.c
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/JANA/md5.c
+END
+JFactory.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/repos/!svn/ver/2446/tags/jana_0.7.7p1/src/JANA/JFactory.h
+END
+JThread.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/JANA/JThread.h
+END
+JEventLoop.cc
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/JANA/JEventLoop.cc
+END
+JEventLoop.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/JANA/JEventLoop.h
+END
+md5.h
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/JANA/md5.h
+END
+JGeometryXML.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/JANA/JGeometryXML.h
+END
+JParameter.cc
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/JANA/JParameter.cc
+END
+JGeometryMYSQL.cc
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/JANA/JGeometryMYSQL.cc
+END
+JEvent.cc
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/JANA/JEvent.cc
+END
+JGeometryMYSQL.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/JANA/JGeometryMYSQL.h
+END
+JEvent.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/JANA/JEvent.h
+END
+JResourceManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/JANA/JResourceManager.h
+END
+cint.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/JANA/cint.h
+END
+JCalibration.cc
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/JANA/JCalibration.cc
+END
+JCalibrationFile.cc
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/JANA/JCalibrationFile.cc
+END
+JVersion.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/repos/!svn/ver/2446/tags/jana_0.7.7p1/src/JANA/JVersion.h
+END
+JCalibration.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/JANA/JCalibration.h
+END
+JCalibrationFile.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/JANA/JCalibrationFile.h
+END
+SConscript
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/JANA/SConscript
+END
+JException.cc
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/JANA/JException.cc
+END
+JEventSource_NULL.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/JANA/JEventSource_NULL.h
+END
+JFactory_base.cc
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/JANA/JFactory_base.cc
+END
+JFactory_base.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/JANA/JFactory_base.h
+END
+JEventSource.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/JANA/JEventSource.h
+END
+JEventSink.cc
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/JANA/JEventSink.cc
+END
+JObject.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/JANA/JObject.h
+END
+JEventSourceGenerator.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/JANA/JEventSourceGenerator.h
+END
+JParameterManager.cc
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/JANA/JParameterManager.cc
+END
+JGeometryXML.cc
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/JANA/JGeometryXML.cc
+END
+JCalibrationGeneratorCCDB.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/JANA/JCalibrationGeneratorCCDB.h
+END
+JParameterManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/JANA/JParameterManager.h
+END
+JFactoryGenerator.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/JANA/JFactoryGenerator.h
+END

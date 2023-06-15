@@ -1,0 +1,27 @@
+
+import os
+from utils import *
+Import('env debugSuffix et_enable')
+
+# Loop over executables, building each
+subdirs = ['jana', 'janadump', 'jcalibcopy', 'jcalibread', 'jgeomread', 'jresource']
+if (et_enable):
+    subdirs += ['janactl']
+
+env.AppendUnique(LIBS="JANA")
+
+for dir in subdirs:
+    print  bcolors.OKBLUE,"Found JANA executable ",dir,bcolors.ENDC
+    #save the relative dir and the absolute dir
+    reldir = str(dir)
+    absdir = Dir('#/src/external/jana_0.7.7p1/src/utilities/'+reldir).srcnode().abspath   
+    env_program=env.Clone()
+    env_program.Append(CPPPATH=absdir)
+           
+    #Add root dictionaries if necessary
+    AddROOTdict(env_program,reldir,absdir)
+    util_src  = Glob(reldir+'/*.cc')
+    env_program.Program(source=util_src,target='#/bin/JANA/'+dir+debugSuffix)
+          
+    
+

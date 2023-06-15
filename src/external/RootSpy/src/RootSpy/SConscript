@@ -1,0 +1,17 @@
+Import('env','execLibs','debugSuffix')
+
+thisEnv = env.Clone()
+
+thisEnv.AppendUnique(CPPPATH = ['.'])
+thisEnv.AppendUnique(LIBS = ['RootSpy-client'+debugSuffix,'cmsgRegex'+debugSuffix,'cmsgxx'+debugSuffix,'cmsg'+debugSuffix,'curl'] + execLibs)
+fileList  = Glob('*.cc');
+
+#reldir = 'RootSpy'
+#absdir = Dir('#/src/external/RootSpy/src/Rootspy').srcnode().abspath   
+#%AddROOTdict(thisEnv,reldir,absdir)
+
+RootSpy     = thisEnv.Program(source  = fileList,target='RootSpy')
+#                          LIBS    = ['RootSpy-client'+debugSuffix,'curl','cmsg'+debugSuffix,'cmsgxx'+debugSuffix] + execLibs)
+
+    
+thisEnv.Install(target = '#/bin/RootSpy', source = RootSpy)

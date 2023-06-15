@@ -1,0 +1,14 @@
+import utils
+
+# get env object and clone it
+Import('env',  'debugSuffix')
+
+
+#sbms.AddROOT(env)
+#sbms.AddCMSG(env)
+#sbms.library(env)
+
+
+env.AppendUnique(CPPPATH = ['.'])
+fileList  = Glob('*.cc');
+RootSpyLib      = env.SharedLibrary(target='#/lib/RootSpy'+debugSuffix,        source = fileList)

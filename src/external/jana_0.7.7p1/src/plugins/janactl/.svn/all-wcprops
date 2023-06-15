@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/plugins/janactl
+END
+janactl_plugin.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/plugins/janactl/janactl_plugin.h
+END
+SConscript
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/plugins/janactl/SConscript
+END
+janactl_plugin.cc
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/plugins/janactl/janactl_plugin.cc
+END

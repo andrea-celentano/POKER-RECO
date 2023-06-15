@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/unit_tests/associated_objects
+END
+TestClassD.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/unit_tests/associated_objects/TestClassD.h
+END
+JEventProcessor_TestProcessor.h
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/unit_tests/associated_objects/JEventProcessor_TestProcessor.h
+END
+TestClassA_factory.h
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/unit_tests/associated_objects/TestClassA_factory.h
+END
+JFactoryGenerator_TestGenerator.h
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/unit_tests/associated_objects/JFactoryGenerator_TestGenerator.h
+END
+TestClassB_factory.h
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/unit_tests/associated_objects/TestClassB_factory.h
+END
+TestClassC_factory.h
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/unit_tests/associated_objects/TestClassC_factory.h
+END
+TestClassD_factory.h
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/unit_tests/associated_objects/TestClassD_factory.h
+END
+SConscript
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/unit_tests/associated_objects/SConscript
+END
+AssociatedObject_test.cc
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/unit_tests/associated_objects/AssociatedObject_test.cc
+END
+TestClassA.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/unit_tests/associated_objects/TestClassA.h
+END
+TestClassB.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/unit_tests/associated_objects/TestClassB.h
+END
+TestClassC.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/unit_tests/associated_objects/TestClassC.h
+END

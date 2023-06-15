@@ -1,0 +1,111 @@
+################################
+# scons build system file
+################################
+#
+# Much of this file can be used as a boilerplate build file.
+#
+# The parts that are dependent on the details of the software
+# package being compiled are:
+#
+#   1) the name and version of this software package
+#   2) the needed header files and libraries
+#   3) what type of documentation needs to be installed
+#   4) the scons files to be run in the source directories
+#
+################################
+
+# Get various python modules
+import re, sys, os, string, subprocess, SCons.Node.FS
+from subprocess import Popen, PIPE
+
+# Get useful python functions we wrote
+import utils
+
+
+Import('env')
+
+env=env.Clone();
+
+# Created files & dirs will have this permission
+os.umask(002)
+
+# Software version
+versionMajor = '3'
+versionMinor = '6'
+
+# Determine the os and machine names
+uname    = os.uname();
+platform = uname[0]
+machine  = uname[4]
+
+
+
+#############################################
+# Command line options (view with "scons -h")
+#############################################
+
+#########################
+# Compile flags
+#########################
+
+
+# Debug/optimization flags
+debugSuffix = ''
+debug = ARGUMENTS.get('debug', 0)
+if debug:
+#    debugSuffix = '-dbg'
+    # Compile with -g and add debugSuffix to all executable names
+    env.AppendUnique(CCFLAGS = '-g')
+    env.AppendUnique(CXXFLAGS = '-g')
+    env.AppendUnique(FORTRANFLAGS = '-g')
+    env.AppendUnique(PROGSUFFIX = debugSuffix)
+
+
+
+
+execLibs = ['']
+
+
+
+    # Platform dependent quantities. Default to standard Linux libs.
+execLibs = ['pthread', 'dl', 'rt']
+    
+if platform == 'Darwin':
+    execLibs = ['pthread', 'dl']
+#    env.Append(CPPDEFINES = ['Darwin'], SHLINKFLAGS = ['-multiply_defined', '-undefined', '-flat_namespace', 'suppress'])
+    env.Append(CCFLAGS = ['-fmessage-length=0'])
+
+
+
+# hidden sub directory into which variant builds go
+archDir = '.' + platform + '_'+machine+debugSuffix
+
+
+
+# If a specific installation dir for includes is not specified
+# on the command line, then the architecture specific include
+# dir is a link to local ../common/include directory.
+archIncLocalLink = None
+#if (incdir == None):
+archIncLocalLink = '../common/include'
+
+
+print 'cMsg build'
+
+
+######################################################
+# Lower level scons files (software package dependent)
+######################################################
+
+# Make available to lower level scons files
+Export('env archDir execLibs debugSuffix')
+
+# Run lower level build files
+env.SConscript('src/regexp/SConscript',   variant_dir='src/regexp/'+archDir,   duplicate=0)
+env.SConscript('src/libsrc/SConscript',   variant_dir='src/libsrc/'+archDir,   duplicate=0)
+env.SConscript('src/libsrc++/SConscript', variant_dir='src/libsrc++/'+archDir, duplicate=0)
+
+
+env.SConscript('src/execsrc/SConscript',  variant_dir='src/execsrc/'+archDir,  duplicate=0)
+env.SConscript('src/examples/SConscript', variant_dir='src/examples/'+archDir, duplicate=0)
+env.SConscript('src/test/SConscript',     variant_dir='src/test/'+archDir,     duplicate=0)

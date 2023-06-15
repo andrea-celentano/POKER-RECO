@@ -1,0 +1,17 @@
+from utils import *
+Import('*')
+
+#Due to the way I use "AddROOTdict", this has to be here rather then in the Sconctruct file within the folder..
+reldir = 'RootSpy'
+absdir = Dir('#/src/external/RootSpy/src/RootSpy').srcnode().abspath   
+AddROOTdict(env,reldir,absdir)
+
+subdirs = ['libRootSpy', 'libRootSpy-client']
+#subdirs.extend(['RootSpy', 'RSArchiver', 'RSMonitor', 'RSelog', 'RSTimeSeries'])
+subdirs.extend(['RootSpy', 'RSMonitor', 'RSelog'])
+#subdirs.extend(['plugins']) #A.C>
+#subdirs.extend(['examples'])
+
+SConscript(dirs=subdirs, exports='env execLibs debugSuffix',duplicate=0)
+
+ 

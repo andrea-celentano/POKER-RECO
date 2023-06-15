@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/plugins/janaevio
+END
+JEventSourceEVIO.cc
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/plugins/janaevio/JEventSourceEVIO.cc
+END
+JEventSourceEVIO.h
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/plugins/janaevio/JEventSourceEVIO.h
+END
+JEventSourceEVIOGenerator.cc
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/plugins/janaevio/JEventSourceEVIOGenerator.cc
+END
+JEventSourceEVIOGenerator.h
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/plugins/janaevio/JEventSourceEVIOGenerator.h
+END

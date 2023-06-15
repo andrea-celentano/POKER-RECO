@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/utilities/jana
+END
+SConscript
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/utilities/jana/SConscript
+END
+MyProcessor.cc
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/utilities/jana/MyProcessor.cc
+END
+MyProcessor.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/utilities/jana/MyProcessor.h
+END
+jana.cc
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/utilities/jana/jana.cc
+END

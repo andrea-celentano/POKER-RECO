@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/utilities/janahbook
+END
+cern_c.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/utilities/janahbook/cern_c.h
+END
+janahbook.cc
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/utilities/janahbook/janahbook.cc
+END
+cern_c.c
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/utilities/janahbook/cern_c.c
+END
+JEventProcessor_janahbook.cc
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/utilities/janahbook/JEventProcessor_janahbook.cc
+END
+JEventProcessor_janahbook.h
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/utilities/janahbook/JEventProcessor_janahbook.h
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/utilities/janahbook/README
+END

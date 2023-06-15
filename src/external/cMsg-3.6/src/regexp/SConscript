@@ -1,0 +1,14 @@
+# scons build file for cMsg C regular expression library
+Import('env', 'debugSuffix')
+
+# Header files to install
+headerList = Glob('cMsg*.h',  strings=True)
+
+libFiles   = ['regcomp.c',
+              'regerror.c',
+              'regexec.c',
+              'regfree.c']
+
+env.AppendUnique(CPPPATH = ['.'])
+regexpLib = env.SharedLibrary(target = '#/lib/cmsgRegex'+debugSuffix, source = libFiles)
+

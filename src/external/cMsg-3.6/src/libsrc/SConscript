@@ -1,0 +1,11 @@
+# scons build file for cMsg C library
+Import('env', 'debugSuffix')
+
+# Files to compile
+fileList = Glob('*.c',  strings=True)
+
+# Headers to install
+headerList = Glob('cMsg*.h',  strings=True)
+
+env.AppendUnique(CPPPATH = ['.'])
+cmsgLib = env.SharedLibrary(target = '#/lib/cmsg'+debugSuffix, source = fileList)

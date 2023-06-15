@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/plugins/TestSpeed
+END
+JEventProcessorTest.cc
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/plugins/TestSpeed/JEventProcessorTest.cc
+END
+JTest.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/plugins/TestSpeed/JTest.h
+END
+JEventSourceTest.cc
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/plugins/TestSpeed/JEventSourceTest.cc
+END
+JEventProcessorTest.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/plugins/TestSpeed/JEventProcessorTest.h
+END
+JEventSourceTest.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/plugins/TestSpeed/JEventSourceTest.h
+END
+JRawData.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/plugins/TestSpeed/JRawData.h
+END
+JTest_factory.cc
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/plugins/TestSpeed/JTest_factory.cc
+END
+JTest_factory.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/plugins/TestSpeed/JTest_factory.h
+END
+JEventSourceTestGenerator.cc
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/plugins/TestSpeed/JEventSourceTestGenerator.cc
+END
+SConscript
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/plugins/TestSpeed/SConscript
+END
+JEventSourceTestGenerator.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/plugins/TestSpeed/JEventSourceTestGenerator.h
+END
+JFactoryGeneratorTest.cc
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/plugins/TestSpeed/JFactoryGeneratorTest.cc
+END
+JFactoryGeneratorTest.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/plugins/TestSpeed/JFactoryGeneratorTest.h
+END

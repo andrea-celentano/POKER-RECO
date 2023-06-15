@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/unit_tests
+END
+SConscript
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/unit_tests/SConscript
+END
+catch.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/unit_tests/catch.hpp
+END

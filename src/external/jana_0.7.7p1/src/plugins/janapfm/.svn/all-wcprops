@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/plugins/janapfm
+END
+JPMUCounts_factory.cc
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/plugins/janapfm/JPMUCounts_factory.cc
+END
+JPMUCounts_factory.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/plugins/janapfm/JPMUCounts_factory.h
+END
+JFactoryGenerator_JPMUCounts.h
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/plugins/janapfm/JFactoryGenerator_JPMUCounts.h
+END
+JEventProcessorJANAPFM.cc
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/plugins/janapfm/JEventProcessorJANAPFM.cc
+END
+JPMUCounts.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/plugins/janapfm/JPMUCounts.h
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/plugins/janapfm/README
+END
+JEventProcessorJANAPFM.h
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/plugins/janapfm/JEventProcessorJANAPFM.h
+END

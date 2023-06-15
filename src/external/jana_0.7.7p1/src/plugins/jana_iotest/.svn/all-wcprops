@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/plugins/jana_iotest
+END
+JEventSourceTest.cc
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/plugins/jana_iotest/JEventSourceTest.cc
+END
+JEventSourceTest.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/plugins/jana_iotest/JEventSourceTest.h
+END
+JEventSourceTestGenerator.cc
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/plugins/jana_iotest/JEventSourceTestGenerator.cc
+END
+SConscript
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/plugins/jana_iotest/SConscript
+END
+JEventSourceTestGenerator.h
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/plugins/jana_iotest/JEventSourceTestGenerator.h
+END

@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/plugins/jcalibws
+END
+JCalibrationWS.cc
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/plugins/jcalibws/JCalibrationWS.cc
+END
+JCalibrationWS.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/plugins/jcalibws/JCalibrationWS.h
+END
+jcalibws.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/plugins/jcalibws/jcalibws.h
+END
+JCalibrationWSGenerator.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/plugins/jcalibws/JCalibrationWSGenerator.h
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/plugins/jcalibws/README
+END

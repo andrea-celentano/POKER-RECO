@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/unit_tests/resource_test
+END
+JResourceManager_test.cc
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/unit_tests/resource_test/JResourceManager_test.cc
+END
+SConscript
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/unit_tests/resource_test/SConscript
+END

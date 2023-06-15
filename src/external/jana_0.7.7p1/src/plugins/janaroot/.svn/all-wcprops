@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/plugins/janaroot
+END
+SConscript
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/plugins/janaroot/SConscript
+END
+JEventProcessor_janaroot.cc
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/plugins/janaroot/JEventProcessor_janaroot.cc
+END
+JEventProcessor_janaroot.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/src/plugins/janaroot/JEventProcessor_janaroot.h
+END

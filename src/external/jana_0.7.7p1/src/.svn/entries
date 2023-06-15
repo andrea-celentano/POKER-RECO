@@ -1,0 +1,77 @@
+10
+
+dir
+2447
+https://phys12svn.jlab.org/repos/tags/jana_0.7.7p1/src
+https://phys12svn.jlab.org/repos
+
+
+
+2017-01-17T13:49:37.386120Z
+2446
+davidl
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+c5ed4466-e916-0410-8347-b3263e9c103d
+
+plugins
+dir
+
+unit_tests
+dir
+
+SConscript
+file
+
+
+
+
+2017-01-17T14:15:14.680220Z
+c5450d5c2b1680390a0df35ddb446072
+2015-11-29T20:12:19.186771Z
+2371
+davidl
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+242
+
+JANA
+dir
+
+utilities
+dir
+
+examples
+dir
+

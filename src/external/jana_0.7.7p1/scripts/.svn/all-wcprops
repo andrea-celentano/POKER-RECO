@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/scripts
+END
+mkfactory
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/scripts/mkfactory
+END
+mkfactory_generator
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/scripts/mkfactory_generator
+END
+janadot_groups.py
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/scripts/janadot_groups.py
+END
+mkplugin
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/scripts/mkplugin
+END
+SConscript
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/scripts/SConscript
+END
+mkprocessor
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/scripts/mkprocessor
+END
+mkeventsource
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/scripts/mkeventsource
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/scripts/Makefile
+END
+mkclass
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/scripts/mkclass
+END
+mkfactory_plugin
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repos/!svn/ver/2445/tags/jana_0.7.7p1/scripts/mkfactory_plugin
+END

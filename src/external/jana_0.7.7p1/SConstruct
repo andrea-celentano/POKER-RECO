@@ -1,0 +1,56 @@
+import os
+import sys
+import subprocess
+import glob
+
+from utils import *
+
+Import ('env et_enable')
+
+
+env=env.Clone();
+
+
+
+# Add src and src/plugins to include search path
+env.AppendUnique(CPPPATH=Dir('#/src/external/jana_0.7.7p1/src/').srcnode().abspath)
+env.AppendUnique(CPPPATH=Dir('#/src/external/jana_0.7.7p1/src/JANA').srcnode().abspath)
+env.AppendUnique(CPPPATH=Dir('#/src/external/jana_0.7.7p1/src/plugins').srcnode().abspath)
+
+# Standard flags (optimization level and warnings)
+env.PrependUnique(      CFLAGS = ['-fPIC', '-Wall'])
+env.PrependUnique(    CXXFLAGS = ['-fPIC', '-Wall', '-std=c++11'])
+env.PrependUnique(FORTRANFLAGS = ['-fPIC', '-Wall'])
+
+# Turn on debug symbols if asked for
+debug = ARGUMENTS.get('debug', 0)
+debugSuffix=''
+if debug:
+#    debugSuffix = '-dbg'
+    env.PrependUnique(      CFLAGS = ['-g'])
+    env.PrependUnique(    CXXFLAGS = ['-g'])
+    env.PrependUnique(FORTRANFLAGS = ['-g'])
+
+
+
+# Add pthread
+env.AppendUnique(LIBS=['pthread'])
+
+# generate configuration header file
+#sbms_config.mk_jana_config_h(env)
+
+# generate jana-config helper script
+#sbms_config.mk_jana_config_script(env)
+
+# build all src
+SConscript('src/SConscript', exports='env debugSuffix et_enable', duplicate=0)
+
+
+
+# install scripts
+#SConscript('scripts/SConscript', exports='env debugSuffix', duplicate=0)
+files = [f for f in Glob('scripts/*') if 'SConscript' not in str(f)]
+env.Install('#bin/JANA/scripts', files)
+
+
+

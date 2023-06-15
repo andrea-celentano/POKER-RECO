@@ -1,0 +1,6 @@
+# get env object and clone it
+Import('env',  'debugSuffix')
+
+env.AppendUnique(CPPPATH = ['.'])
+fileList  = Glob('*.cc');
+RootSpyClientLib      = env.SharedLibrary(target='#/lib/RootSpy-client'+debugSuffix,source = fileList)
