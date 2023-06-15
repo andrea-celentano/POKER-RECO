@@ -16,11 +16,10 @@ using namespace jana;
 #include <EPICS/JFactoryGenerator_EPICS.h>
 #include <TT/JFactoryGenerator_TT.h>
 #include <IntVeto/JFactoryGenerator_IntVeto.h>
-#include <ExtVeto/JFactoryGenerator_ExtVeto.h>
 #include <Calorimeter/JFactoryGenerator_Calorimeter.h>
-#include <Paddles/JFactoryGenerator_Paddles.h>
-#include <BDXmini/JFactoryGenerator_BDXmini.h>
 #include <EventBuilder/JFactoryGenerator_EventBuilder.h>
+
+#include <BDXmini/JFactoryGenerator_BDXmini.h>
 
 #ifdef MC_SUPPORT_ENABLE
 #include <MC/JFactoryGenerator_MC.h>
@@ -67,16 +66,10 @@ int main(int narg, char *argv[])
 #endif
 	app.AddFactoryGenerator(new JFactoryGenerator_TT());
 	jout<<"JFactoryGenerator_TT DONE"<<endl;
-	app.AddFactoryGenerator(new JFactoryGenerator_ExtVeto());
-	jout<<"JFactoryGenerator_ExtVeto DONE"<<endl;
 	app.AddFactoryGenerator(new JFactoryGenerator_IntVeto());
 	jout<<"JFactoryGenerator_IntVeto DONE"<<endl;
 	app.AddFactoryGenerator(new JFactoryGenerator_Calorimeter());
 	jout<<"JFactoryGenerator_Calorimeter DONE"<<endl;
-	app.AddFactoryGenerator(new JFactoryGenerator_Paddles());
-	jout<<"JFactoryGenerator_Paddles DONE"<<endl;
-	app.AddFactoryGenerator(new JFactoryGenerator_BDXmini());
-	jout<<"JFactoryGenerator_BDXmini DONE"<<endl;
 	app.AddFactoryGenerator(new JFactoryGenerator_EventBuilder());
 	jout<<"JFactoryGenerator_EventBuilder DONE"<<endl;
 	app.AddProcessor(new BDXEventProcessor());
