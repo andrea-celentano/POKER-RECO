@@ -1,0 +1,16 @@
+##### RootSys config. file ###
+##### Generated on Fri Apr 21 08:10:25 2023
+
+
+
+TAB: "Waveforms" 0
+//DAQWaveformsMode1slot1_BDXmini
+
+TAB: "POKERINO_ENE" 0
+//POKERINO_ENE
+
+TAB: "POKERINO_ENE2D" 0
+/NA64EcalHits/hE_2D
+
+
+
