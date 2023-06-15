@@ -1,0 +1,13 @@
+setenv CCDB_USER bdxCT
+
+ccdb -c "+connection_string+" add -v "+variation + "-r "+str(runMin)+"-"+str(runMax) table fileName
+
+
+table:
+
+/Calorimeter/sipm_gain
+/Calorimeter/Ene
+/Calorimeter/thr
+
+/InnerVeto/sipm_gain
+/InnerVeto/sipm_ampl
