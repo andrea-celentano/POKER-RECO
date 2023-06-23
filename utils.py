@@ -68,11 +68,11 @@ class bcolors:
 def AddROOTdict(env,reldir,absdir):
     rootsys = os.getenv('ROOTSYS')
     rootclingpath = "%s/bin/rootcling" % (rootsys)
-    if ("BDXRECO_ROOT" not in os.environ):
-        print bcolors.RED+" BDXRECO_ROOT env. var is not defined!! Can't work with ROOT dictionaries "+bcolors.ENDC
+    if ("POKERRECO_ROOT" not in os.environ):
+        print bcolors.RED+" POKERRECO_ROOT env. var is not defined!! Can't work with ROOT dictionaries "+bcolors.ENDC
         print bcolors.RED+" PLEASE DEFINE IT! "+bcolors.ENDC
         return -1
-    dictdir = os.getenv('BDXRECO_ROOT')+"/lib"
+    dictdir = os.getenv('POKERRECO_ROOT')+"/lib"
 
     if env['SHOWBUILD']==0:
         rootclingactionNoLinkDef = SCons.Script.Action("%s -f $TARGET -c -p -I%s $SOURCE ; mv `echo $TARGET | awk '{print substr($0,0,length($0)-3) \"_rdict.pcm\"}'` %s" % (rootclingpath," -I".join(env['CPPPATH']),dictdir), 'ROOTCLING  [$SOURCE]')
