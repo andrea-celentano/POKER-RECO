@@ -6,7 +6,7 @@ import argparse
 import glob
 
 #check current working dir
-command = "cd "+os.environ['BDXRECO_ROOT']+"/calib ; pwd "
+command = "cd "+os.environ['POKERRECO_ROOT']+"/calib ; pwd "
 p = subprocess.Popen(command,shell=True,stdout=subprocess.PIPE) 
 bdx_fold , err = p.communicate()
 

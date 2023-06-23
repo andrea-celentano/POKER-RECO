@@ -2,11 +2,11 @@ import string,math,os,sys,subprocess
 import argparse,glob
 
 #check current working dir
-if ("BDXRECO_ROOT" in os.environ)==0:
-    print "BDXRECO_ROOT enviromental variable not defined. Exit"
+if ("POKERRECO_ROOT" in os.environ)==0:
+    print "POKERRECO_ROOT enviromental variable not defined. Exit"
     sys.exit()
 
-command = "cd "+os.environ['BDXRECO_ROOT']+"/calib ; pwd "
+command = "cd "+os.environ['POKERRECO_ROOT']+"/calib ; pwd "
 p = subprocess.Popen(command,shell=True,stdout=subprocess.PIPE)
 bdx_fold , err = p.communicate()
 
