@@ -14,6 +14,7 @@ using namespace jana;
 
 #include "Calorimeter/CalorimeterHit.h"
 #include "DAQ/eventData.h"
+#include "Calorimeter/CalorimeterCluster.h"
 
 #include <system/JROOTOutput.h>
 #include <system/BDXEventProcessor.h>
@@ -31,6 +32,8 @@ static const int nECAL = 9;
 static TH1D *hNA64EcalHitsEnergy[nECAL] = { 0 };
 static TH2D *hNA64EcalHitsEnergy2D = 0;
 static TH2D *hNA64EcalHitsEnergy2D_n =0;
+static TH1D *hPOKERINOClustEnergy[nECAL] = { 0 };
+static TH2D *hPOKERINOClustEnergy2D = 0;
 
 extern "C" {
 void InitPlugin(JApplication *app) {
@@ -118,12 +121,14 @@ jerror_t JEventProcessor_NA64EcalHits::init(void) {
         id = id - 1;
 
         hNA64EcalHitsEnergy[id] = new TH1D(Form("hE_x%i_y%i", iX, iY), Form("hE_x%i_y%i", iX, iY), NE, Emin, Emax);
-        hNA64EcalHitsEnergy[id]->GetXaxis()->SetTitle("E");
+	hNA64EcalHitsEnergy[id]->GetXaxis()->SetTitle("E");
+        hPOKERINOClustEnergy[id] = new TH1D(Form("hE_Clust_x%i_y%i", iX, iY), Form("hEClust_x%i_y%i", iX, iY), NE, Emin, Emax);
 
     }
 
     hNA64EcalHitsEnergy2D=new TH2D("hE_2D","hE_2D",3,-0.5,2.5,3,-0.5,2.5);
     hNA64EcalHitsEnergy2D_n=new TH2D("hE_2Dn","hE_2D",3,-0.5,2.5,3,-0.5,2.5);
+    hPOKERINOClustEnergy2D=new TH2D("hEClust_2D","hEClust_2D",3,-0.5,2.5,3,-0.5,2.5);
     // back to main dir
     main->cd();
     japp->RootUnLock();
@@ -195,7 +200,11 @@ jerror_t JEventProcessor_NA64EcalHits::evnt(JEventLoop *loop, uint64_t eventnumb
 
     vector<const CalorimeterHit*> hits;
     vector<const CalorimeterHit*>::iterator hits_it;
+    vector<const CalorimeterCluster*> clusters;
+    vector<const CalorimeterCluster*>::iterator clusters_it;
+
     const CalorimeterHit *m_hit;
+    const CalorimeterCluster *m_cluster;
     const eventData *tData;
     if (!m_isMC) {
         try {
@@ -207,7 +216,10 @@ jerror_t JEventProcessor_NA64EcalHits::evnt(JEventLoop *loop, uint64_t eventnumb
     }
 
     loop->Get(hits);
+    loop->Get(clusters);
+
     int sector, X, Y, id;
+    double X_clust, Y_clust, id_clust;
 
     for (hits_it = hits.begin(); hits_it != hits.end(); hits_it++) {
         m_hit = *hits_it;
@@ -230,7 +242,28 @@ jerror_t JEventProcessor_NA64EcalHits::evnt(JEventLoop *loop, uint64_t eventnumb
 
         japp->RootUnLock();
     }
-    japp->RootWriteLock();
+// Anna: fill histograms with cluster hits
+  for (clusters_it = clusters.begin(); clusters_it != clusters.end(); clusters_it++) {
+        m_cluster = *clusters_it;
+
+        X_clust = m_cluster->x;
+        Y_clust = m_cluster->y;
+
+        //if ((X < 0) || (X > 2) || (Y < 0) || (Y > 2))
+        //    continue;
+        id_clust = geometry[make_pair(X_clust, Y_clust)];
+        id_clust = id_clust - 1;
+
+        japp->RootWriteLock();
+	    hPOKERINOClustEnergy[id]->Fill(m_cluster->E);
+
+        hPOKERINOClustEnergy2D->Fill(X_clust,Y_clust,m_cluster->E);
+
+        japp->RootUnLock();
+        }
+
+
+   japp->RootWriteLock();
     hNA64EcalHitsEnergy2D->Divide( hNA64EcalHitsEnergy2D_n);
     japp->RootUnLock();
     return NOERROR;
