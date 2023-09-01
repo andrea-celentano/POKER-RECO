@@ -77,3 +77,4 @@ src/external/et/src/execsrc/.Linux_x86_64/
 .pid
 .pydevproject
 .settings
+.metadata

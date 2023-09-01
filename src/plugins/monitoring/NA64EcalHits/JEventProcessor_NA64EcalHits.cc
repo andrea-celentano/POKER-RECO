@@ -14,6 +14,7 @@ using namespace jana;
 
 #include "Calorimeter/CalorimeterHit.h"
 #include "DAQ/eventData.h"
+#include "Calorimeter/CalorimeterCluster.h"
 
 #include <system/JROOTOutput.h>
 #include <system/BDXEventProcessor.h>
@@ -30,6 +31,7 @@ static const int nECAL = 9;
 //Energy
 static TH1D *hNA64EcalHitsEnergy[nECAL] = { 0 };
 static TH2D *hNA64EcalHitsEnergy2D = 0;
+
 static TH2D *hNA64EcalHitsEnergy2D_n = 0;
 
 static TH2D *hNA64EcalHitsEnergyFrac = 0;
@@ -157,7 +159,6 @@ jerror_t JEventProcessor_NA64EcalHits::init(void) {
 	japp->RootUnLock();
 
 	return NOERROR;
-
 }
 
 //------------------
