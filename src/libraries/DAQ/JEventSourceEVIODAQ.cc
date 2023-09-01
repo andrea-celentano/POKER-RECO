@@ -536,6 +536,9 @@ jerror_t JEventSourceEvioDAQ::GetObjects(JEvent &event, JFactory_base *factory) 
 							for (int itrigWord = 0; itrigWord < pData->size(); itrigWord++) {
 								this_eventData->triggerWords.push_back((*pData)[itrigWord]);
 							}
+							if (pData->size()>=2){
+								this_eventData->spillN=this_eventData->triggerWords[2]; //A.C. POKERINO summer 2023
+							}
 						}
 
 					}

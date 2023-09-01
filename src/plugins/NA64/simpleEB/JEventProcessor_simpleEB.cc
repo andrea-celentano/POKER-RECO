@@ -199,6 +199,7 @@ jerror_t JEventProcessor_simpleEB::evnt(JEventLoop *loop,
 	m_evnN = tData->eventN;
 	m_runN = tData->runN;
 	m_evnTime = tData->time;
+	m_spillN = (int)(tData->spillN);
 
 	for (m_chits_it = m_chits.begin(); m_chits_it != m_chits.end(); m_chits_it++) {
 		m_chit = *m_chits_it;
