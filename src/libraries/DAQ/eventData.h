@@ -24,6 +24,7 @@ class eventData:public jana::JObject{
 		
 		unsigned long int eventN;
 		unsigned long int eventTS; //This has been added for the TRIDAS system, where an event is identified uniquely by an TS id and an event ID
+		unsigned long int spillN;  //For SPS
 		unsigned int runN;
 		unsigned long int time; //event time in UNIX time stamp (seconds)
 		std::vector<uint32_t> triggerWords;
@@ -37,6 +38,7 @@ class eventData:public jana::JObject{
 			AddString(items,"runN","%i",runN);
 			AddString(items,"eventN","%lu",eventN);
 			AddString(items,"eventTS","%lu",eventTS);
+			AddString(items,"spillN","%lu",spillN);
 			AddString(items,"time","%lu",time);
 			for (int iword=0;iword<triggerWords.size();iword++){
 			 AddString(items, Form("word_%i",iword), "%x", triggerWords[iword]);

@@ -20,12 +20,11 @@
 
 using namespace jana;
 
-
-
-class TranslationTable: public jana::JObject{
+class TranslationTable: public jana::JObject {
 
 public:
-	JOBJECT_PUBLIC(TranslationTable);
+	JOBJECT_PUBLIC(TranslationTable)
+	;
 
 	TranslationTable(JEventLoop *loop);
 	~TranslationTable();
@@ -35,7 +34,7 @@ public:
 	// indexes. These are then used below in the DChannelInfo
 	// class to relate them to the DAQ indexing scheme of
 	// crate, slot, channel.
-	struct csc_t : public TObject{
+	struct csc_t: public TObject {
 		uint8_t rocid;
 		uint8_t slot;
 		uint8_t channel;
@@ -45,22 +44,39 @@ public:
 					&& (channel == rhs.channel);
 		}
 
-		csc_t(){};
-		virtual ~csc_t(){};
-		void setCrateSlotChannel(uint8_t cr,uint8_t sl,uint8_t ch){rocid=cr;slot=sl;channel=ch;}
+		csc_t() {
+		}
+		;
+		virtual ~csc_t() {
+		}
+		;
+		void setCrateSlotChannel(uint8_t cr, uint8_t sl, uint8_t ch) {
+			rocid = cr;
+			slot = sl;
+			channel = ch;
+		}
 		//...................................
 		// Less than operator for csc_t data types. This is used by
 		// the map<csc_t, XX> to order the entires by key
-		bool operator<(const TranslationTable::csc_t &b) const{
-			if (rocid < b.rocid) return true;
-			if (rocid > b.rocid) return false;
-			if (slot < b.slot) return true;
-			if (slot > b.slot) return false;
-			if (channel < b.channel) return true;
-			if (channel > b.channel) return false;
+		bool operator<(const TranslationTable::csc_t &b) const {
+			if (rocid < b.rocid)
+				return true;
+			if (rocid > b.rocid)
+				return false;
+			if (slot < b.slot)
+				return true;
+			if (slot > b.slot)
+				return false;
+			if (channel < b.channel)
+				return true;
+			if (channel > b.channel)
+				return false;
 			return false;
 		}
-		string print()const{return Form("DAQ crate: %i slot: %i channel: %i",rocid,slot,channel);}
+		string print() const {
+			return Form("DAQ crate: %i slot: %i channel: %i", rocid, slot,
+					channel);
+		}
 
 		ClassDef(csc_t,1);
 
@@ -72,6 +88,7 @@ public:
 		INT_VETO,
 		CALORIMETER,
 		PADDLES,
+		CERENKOV,
 		NUM_DETECTOR_TYPES
 	};
 
@@ -85,6 +102,8 @@ public:
 			return "Calorimeter";
 		case PADDLES:
 			return "PADDLES";
+		case CERENKOV:
+			return "CERENKOV";
 		case UNKNOWN_DETECTOR:
 		default:
 			return "UNKNOWN";
@@ -102,7 +121,7 @@ public:
 	 * readout = 0 when dealing with the PHYSICAL volume
 	 * readout = 1 ... Nreadouts when dealing with the sensors
 	 * */
-	class EXT_VETO_Index_t :  public TObject{
+	class EXT_VETO_Index_t: public TObject {
 	public:
 		int8_t sector;
 		int8_t layer;
@@ -129,7 +148,8 @@ public:
 		}
 		static const int nIDs() {
 			return 4;
-		};
+		}
+		;
 		inline bool isSameActive(const EXT_VETO_Index_t &rhs) const {
 			return (sector == rhs.sector) && (layer == rhs.layer)
 					&& (component == rhs.component);
@@ -156,13 +176,64 @@ public:
 				return false;
 			return false;
 		}
-		string name()const{return "EXT_Veto";}
-		string print()const{return Form("ExtVeto sector: %i layer: %i component: %i readout:%i",sector,layer,component,readout);}
+		string name() const {
+			return "EXT_Veto";
+		}
+		string print() const {
+			return Form("ExtVeto sector: %i layer: %i component: %i readout:%i",
+					sector, layer, component, readout);
+		}
 		ClassDef(EXT_VETO_Index_t,1);
 
 	};
 
-	class INT_VETO_Index_t : public TObject{
+	class CERENKOV_Index_t: public TObject {
+	public:
+		int8_t index;
+		int8_t readout;
+		int8_t& ID(int n) {
+			switch (n) {
+			case 0:
+				return index;
+				break;
+			case 1:
+				return readout;
+				break;
+			default:
+				jerr << "Wrong id" << std::endl;
+				break;
+			}
+		}
+		static const int nIDs() {
+			return 2;
+		}
+		inline bool isSameActive(const CERENKOV_Index_t &rhs) const {
+			return (index == rhs.index);
+		}
+		inline bool operator==(const CERENKOV_Index_t &rhs) const {
+			return isSameActive(rhs)&&(readout == rhs.readout);
+		}
+		inline bool operator<(const CERENKOV_Index_t &rhs) const { //A.C. for the maps
+			if (index > rhs.index)
+				return true;
+			if (index < rhs.index)
+				return false;
+			if (readout > rhs.readout)
+				return true;
+			if (readout < rhs.readout)
+				return false;
+		}
+		string name() const {
+			return "CERENKOV";
+		}
+		string print() const {
+			return Form("Cerenkov index: %i readout: %i", index,readout);
+		}
+
+		ClassDef(CERENKOV_Index_t,1);
+	};
+
+	class INT_VETO_Index_t: public TObject {
 	public:
 		int8_t sector;
 		int8_t layer;
@@ -189,7 +260,8 @@ public:
 		}
 		static const int nIDs() {
 			return 4;
-		};
+		}
+		;
 		inline bool isSameActive(const INT_VETO_Index_t &rhs) const {
 			return (sector == rhs.sector) && (layer == rhs.layer)
 					&& (component == rhs.component);
@@ -216,14 +288,19 @@ public:
 				return false;
 			return false;
 		}
-		string name()const{return "INT_Veto";}
-		string print()const{return Form("IntVeto sector: %i layer: %i component: %i readout:%i",sector,layer,component,readout);}
+		string name() const {
+			return "INT_Veto";
+		}
+		string print() const {
+			return Form("IntVeto sector: %i layer: %i component: %i readout:%i",
+					sector, layer, component, readout);
+		}
 
 		ClassDef(INT_VETO_Index_t,1);
 
 	};
 
-	class CALO_Index_t : public TObject{
+	class CALO_Index_t: public TObject {
 	public:
 		int8_t sector;
 		int8_t x, y;
@@ -249,7 +326,8 @@ public:
 		}
 		static const int nIDs() {
 			return 4;
-		};
+		}
+		;
 		inline bool isSameActive(const CALO_Index_t &rhs) const {
 			return (sector == rhs.sector) && (x == rhs.x) && (y == rhs.y);
 		}
@@ -275,12 +353,17 @@ public:
 				return false;
 			return false;
 		}
-		string name()const{return "CALO";}
-		string print()const{return Form("Calo sector: %i x: %i y: %i readout:%i",sector,x,y,readout);}
+		string name() const {
+			return "CALO";
+		}
+		string print() const {
+			return Form("Calo sector: %i x: %i y: %i readout:%i", sector, x, y,
+					readout);
+		}
 		ClassDef(CALO_Index_t,1);
 	};
 
-	class PADDLES_Index_t : public TObject{
+	class PADDLES_Index_t: public TObject {
 	public:
 		int8_t id;
 		int8_t& ID(int n) {
@@ -295,7 +378,8 @@ public:
 		}
 		static const int nIDs() {
 			return 1;
-		};
+		}
+		;
 		inline bool isSameActive(const PADDLES_Index_t &rhs) const {
 			return (id == rhs.id);
 		}
@@ -310,13 +394,17 @@ public:
 
 			return false;
 		}
-		string name() const{return "PADDLES";}
-		string print()const{return Form("PADDLE id: %i",id);}
+		string name() const {
+			return "PADDLES";
+		}
+		string print() const {
+			return Form("PADDLE id: %i", id);
+		}
 		ClassDef(PADDLES_Index_t,1);
 	};
 
 	/*A single class that handles ALL the possible indexes trough a C++ union*/
-	class ChannelInfo : public TObject{
+	class ChannelInfo: public TObject {
 	public:
 		csc_t CSC;   //This is crate - slot - channel
 		//DModuleType::type_id_t module_type;
@@ -326,6 +414,7 @@ public:
 			INT_VETO_Index_t *int_veto;
 			CALO_Index_t *calorimeter;
 			PADDLES_Index_t *paddles;
+			CERENKOV_Index_t *cerenkov;
 		};
 		ClassDef(ChannelInfo,1);
 	};

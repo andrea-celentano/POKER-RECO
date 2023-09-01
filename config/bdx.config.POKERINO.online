@@ -17,11 +17,11 @@ DAQ:VERBOSE 2
 
 #Calo wave integration parameters
 CALORIMETER:NPED	        15	#num of samples to include in pedestal at the beginning               (in samples)
-CALORIMETER:FIRST	        70	#first sample (included) to include in the integration window 	      (in samples)
-CALORIMETER:LAST	        120 #last sample  (included)  to include in the integration window        (in samples) 
+CALORIMETER:FIRST	        20	#first sample (included) to include in the integration window 	      (in samples)
+CALORIMETER:LAST	        80 #last sample  (included)  to include in the integration window        (in samples) 
 CALORIMETER:HIT_THR	         0  #Charge threshold to consider a good hit
 CALORIMETER:SCALE           -1  #Negative signal, need inversion
-CALORIMETER:HIT_THR        -100 #Threshold in charge
+#CALORIMETER:HIT_THR        -100 #Threshold in charge
 
 ################################
 ############PLUGINS#############
@@ -29,7 +29,9 @@ CALORIMETER:HIT_THR        -100 #Threshold in charge
 
 #Parameters for the NA64EcalHits plugin
 NA64EcalHits:Emin 0
-NA64EcalHits:Emax 40000
-NA64EcalHits:NE   500
+NA64EcalHits:Emax 180
+NA64EcalHits:NE   4000
+#Min energy to enter energy sum
+NA64EcalHits:EsumThr 0.1
 
 

@@ -9,5 +9,6 @@
 #pragma link C++ class TranslationTable::INT_VETO_Index_t+;
 #pragma link C++ class TranslationTable::CALO_Index_t+;
 #pragma link C++ class TranslationTable::PADDLES_Index_t+;
+#pragma link C++ class TranslationTable::CERENKOV_Index_t+;
 #pragma link C++ class TranslationTable::ChannelInfo+;
 #endif

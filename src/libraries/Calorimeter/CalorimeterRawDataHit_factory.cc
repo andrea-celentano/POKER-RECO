@@ -142,11 +142,15 @@ jerror_t CalorimeterRawDataHit_factory::evnt(JEventLoop *loop, uint64_t eventnum
             m_CalorimeterRawDataHit->T = T;
             m_CalorimeterRawDataHit->Q = Q;
 
+            m_CalorimeterRawDataHit->AddAssociatedObject(hit);
+
                /*Apply a scaling factor if possible*/
            /* m_wb_calib = m_wb_gain->getCalibSingle(*(m_channel.calorimeter));
             if (m_wb_calib > 0) {
                 m_CalorimeterRawDataHit->Q = m_CalorimeterRawDataHit->Qraw * m_wb_calib;
             }*/
+
+
 
 
             _data.push_back(m_CalorimeterRawDataHit);

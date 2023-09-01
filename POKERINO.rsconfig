@@ -1,5 +1,5 @@
 ##### RootSys config. file ###
-##### Generated on Fri Apr 21 08:10:25 2023
+##### Generated on Fri Jul 28 09:56:51 2023
 
 
 
@@ -10,7 +10,19 @@ TAB: "POKERINO_ENE" 0
 //POKERINO_ENE
 
 TAB: "POKERINO_ENE2D" 0
-/NA64EcalHits/hE_2D
+//POKERINO_ENE2D
+
+TAB: "POKERINO_WAVES" 0
+//DAQWaveformsMode1_POKERINO
+
+TAB: "TopMinusBottom" 0
+/NA64EcalHits/hNA64EcalHits_TopMinusBottom
+
+TAB: "JuraMinusSaleve" 0
+/NA64EcalHits/hNA64EcalHits_JuraMinusSaleve
+
+TAB: "Etot" 0
+/NA64EcalHits/hNA64EcalHitsEnergyTot
 
 
 

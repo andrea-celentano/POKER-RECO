@@ -30,20 +30,24 @@ private:
     JROOTOutput *m_ROOTOutput;
     int m_isMC;
 
-    std::map<int,std::pair<int, int>> geometry;
+
 
     TTree *m_tout;
 
     vector<vector<double>> m_samples;
     double m_A[3][3];
+    double m_E[3][3];
     double m_Q[3][3];
     double m_T[3][3];
+    double m_Etot;
 
     double A1,A2,Abig;
 
+    int cerenkov; //bit0, bit1, bit2
 
-    double m_samplingT;
-    int m_evnN, m_runN;
+
+
+    int m_evnN,m_runN,m_spillN;
     ULong64_t m_evnTime;
 
 };

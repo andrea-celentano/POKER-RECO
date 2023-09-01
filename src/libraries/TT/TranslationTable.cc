@@ -232,6 +232,8 @@ TranslationTable::Detector_t DetectorStr2DetID(string &type)
 		return TranslationTable::CALORIMETER;
 	} else if ( type == "paddles" ) {
 		return TranslationTable::PADDLES;
+	} else if ( type == "cerenkov" ) {
+		return TranslationTable::CERENKOV;
 	} else {
 		return TranslationTable::UNKNOWN_DETECTOR;
 	}
@@ -260,7 +262,7 @@ void StartElement(void *userData, const char *xmlname, const char **atts)
 	int channel = 0;
 	string Detector, locSystem;
 //	int end=0;
-	int row=0,column=0,module=0,sector=0,layer=0,component=0,readout=0;
+	int row=0,column=0,module=0,sector=0,layer=0,component=0,readout=0,index=0;
 	int id=0;
 //	int side=0;
 
@@ -329,6 +331,8 @@ void StartElement(void *userData, const char *xmlname, const char **atts)
 				sector = ival;
 			else if (tag == "layer")
 				layer = ival;
+			else if (tag == "index")
+				index = ival;
 			else if (tag == "component")
 				component = ival;
 			else if (tag == "id")
@@ -373,6 +377,11 @@ void StartElement(void *userData, const char *xmlname, const char **atts)
 			ci.calorimeter->x = column;  //A.C. fine, x is a column and y is a row
 			ci.calorimeter->y = row;
 			ci.calorimeter->readout = readout;
+			break;
+		case TranslationTable::CERENKOV:
+			ci.cerenkov = new TranslationTable::CERENKOV_Index_t;
+			ci.cerenkov->index = index;
+			ci.cerenkov->readout = readout; //0 analogic; 1 : digital
 			break;
 		case TranslationTable::PADDLES:
 			ci.paddles = new TranslationTable::PADDLES_Index_t;
