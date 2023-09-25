@@ -2,7 +2,7 @@
 
 #a dummy script to create all the tables
 
-set command = "ccdb -c mysql://ccdb_user@jdaq8/ccdb"
+set command = "ccdb -c mysql://bdxwriter:e1tocome@clasdb/BDX"
 
 #DAQ
 set DAQFolder = "/DAQ"
