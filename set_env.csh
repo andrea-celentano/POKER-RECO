@@ -13,13 +13,13 @@ endif
 
 echo "POKERRECO_ROOT set to $POKERRECO_ROOT"
 
-#set MYSQLHOST=clasdb.jlab.org
-#set MYSQLUSER=bdxreader
-#set MYSQLDB=BDX
+set MYSQLHOST=clasdb.jlab.org
+set MYSQLUSER=bdxreader
+set MYSQLDB=BDX
 
-set MYSQLHOST=jdaq8
-set MYSQLUSER=ccdb_user
-set MYSQLDB=ccdb
+#set MYSQLHOST=jdaq8
+#set MYSQLUSER=ccdb_user
+#set MYSQLDB=ccdb
 
 setenv JANA_CALIB_URL mysql://$MYSQLUSER@$MYSQLHOST/$MYSQLDB
 setenv JANA_PLUGIN_PATH $POKERRECO_ROOT/lib:$POKERRECO_ROOT/lib/plugins:$POKERRECO_ROOT/lib/users
