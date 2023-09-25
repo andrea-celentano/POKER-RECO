@@ -66,7 +66,7 @@ env.Replace(RPATH=Dir('#/lib').srcnode().abspath)
 env.Append(LINKFLAGS = '-rdynamic')
 
 #A.C. only for this installation
-env.Append(CCFLAGS = "-std=c++11")
+env.Append(CCFLAGS = "-std=c++17")
 
 Export('env debug et_enable mc_enable')
 
