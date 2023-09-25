@@ -86,9 +86,9 @@ jerror_t fa250Mode1CalibPedSubHit_factory::evnt(JEventLoop *loop, uint64_t event
 
 		for (uint32_t j = 0; j < hit->samples.size(); j++) {  //j=0
 			sample = (double) hit->samples[j]; //get the sample
+			CalibPedSubHit->samplesRaw.push_back(sample);
 			sample = sample - pedestal; //subtract the pedestal (in FADC units)
 			sample = sample * LSB; //convert to mV
-
 			CalibPedSubHit->samples.push_back(sample);
 		}
 		CalibPedSubHit->m_dT = dT;
@@ -126,6 +126,7 @@ jerror_t fa250Mode1CalibPedSubHit_factory::evnt(JEventLoop *loop, uint64_t event
 
 		for (uint32_t j = 0; j < hit->samples.size(); j++) {  //j=0
 			sample = (double) hit->samples[j]; //get the sample
+		  CalibPedSubHit->samplesRaw.push_back(sample);
 			sample = sample - pedestal; //subtract the pedestal (in FADC units)
 			sample = sample * LSB; //convert to mV
 
