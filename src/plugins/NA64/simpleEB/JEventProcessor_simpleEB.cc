@@ -66,6 +66,7 @@ jerror_t JEventProcessor_simpleEB::init(void) {
 	m_tout = new TTree("tout_NA64", "NA64 simple EB");
 	//m_tout->Branch("samples", &m_samples);
 	m_tout->Branch("A", &m_A, "A[3][3]/D");
+  m_tout->Branch("Araw", &m_Araw, "Araw[3][3]/D");
 	m_tout->Branch("Q", &m_Q, "Q[3][3]/D");
 	m_tout->Branch("E", &m_E, "E[3][3]/D");
 	m_tout->Branch("T", &m_T, "T[3][3]/D");
@@ -187,6 +188,7 @@ jerror_t JEventProcessor_simpleEB::evnt(JEventLoop *loop,
 		for (int iy = 0; iy < 3; iy++) {
 			m_Q[ix][iy] = -1;
 			m_A[ix][iy] = -1;
+		  m_Araw[ix][iy] = -1;
 			m_E[ix][iy] = -1;
 			m_T[ix][iy] = -1;
 		}
@@ -222,6 +224,7 @@ jerror_t JEventProcessor_simpleEB::evnt(JEventLoop *loop,
 			m_E[X][Y] = m_hit->E;
 			m_Q[X][Y] = m_hit->Eraw;
 			m_A[X][Y] = m_hit->A;
+	    m_Araw[X][Y] = m_hit->Araw;
 			m_T[X][Y] = m_hit->T;
 
 			if (m_hit->E>.1)

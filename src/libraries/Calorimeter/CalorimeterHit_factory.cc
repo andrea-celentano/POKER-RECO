@@ -113,6 +113,7 @@ jerror_t CalorimeterHit_factory::evnt(JEventLoop *loop, uint64_t eventnumber) {
 				m_CalorimeterHit->T = T;
 				m_CalorimeterHit->Eraw = Q;
 				m_CalorimeterHit->A = m_CalorimeterDigiHit->A;
+		    m_CalorimeterHit->Araw = m_CalorimeterDigiHit->Araw;
 				m_CalorimeterHit->RMSflag = m_CalorimeterDigiHit->RMSflag;
 
 				/*Try to calibrate in energy and ped-sub*/

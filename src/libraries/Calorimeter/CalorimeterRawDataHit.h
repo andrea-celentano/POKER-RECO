@@ -40,6 +40,7 @@ public:
 		AddString(items, "Qraw", "%f",Qraw);
 		AddString(items, "Q","%f",Q);
 		AddString(items, "A","%f",A);
+		AddString(items, "Araw","%f",Araw);
 		AddString(items, "T","%f",T);
 		AddString(items, "pedMean","%f",pedMean);
 		AddString(items, "pedRMS","%f",pedRMS);

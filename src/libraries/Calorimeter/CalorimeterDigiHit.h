@@ -30,9 +30,10 @@ public:
 		AddString(items, "Q", "%f", Q);
 		AddString(items, "T", "%f", T);
 		AddString(items, "A", "%f", A);
+	  AddString(items, "Araw", "%f", Araw);
 	}
 
-	double Q,T,A; //Charge (u.a.), time (ns), Amplitude (mV)
+	double Q,T,A,Araw; //Charge (u.a.), time (ns), Amplitude (mV)
 	double pedMean,pedRMS;
 	bool RMSflag;
 	TranslationTable::CALO_Index_t m_channel; //Detector-specific ID. Since this is a detector-based object, the readout field will be 0

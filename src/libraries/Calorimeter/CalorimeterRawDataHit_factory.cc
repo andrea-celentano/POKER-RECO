@@ -118,6 +118,7 @@ jerror_t CalorimeterRawDataHit_factory::evnt(JEventLoop *loop, uint64_t eventnum
             double ped = 0;
             double Q = 0;
             double A = -9999;
+            double Araw = -9999;
             double T = 0;
 
             for (int jj = 0; jj < hit->samples.size(); jj++) {
@@ -128,6 +129,7 @@ jerror_t CalorimeterRawDataHit_factory::evnt(JEventLoop *loop, uint64_t eventnum
                 }
                 if (hit->samples[jj]*m_scale > A) {
                     A = hit->samples[jj]*m_scale;
+                    Araw=hit->samplesRaw[jj];
                     T = jj * hit->m_dT;
                 }
             }
@@ -139,6 +141,7 @@ jerror_t CalorimeterRawDataHit_factory::evnt(JEventLoop *loop, uint64_t eventnum
             m_CalorimeterRawDataHit->Qraw = Q;
 
             m_CalorimeterRawDataHit->A = A;
+            m_CalorimeterRawDataHit->Araw = Araw;
             m_CalorimeterRawDataHit->T = T;
             m_CalorimeterRawDataHit->Q = Q;
 

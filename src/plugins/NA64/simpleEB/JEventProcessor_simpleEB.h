@@ -36,6 +36,7 @@ private:
 
     vector<vector<double>> m_samples;
     double m_A[3][3];
+    double m_Araw[3][3];
     double m_E[3][3];
     double m_Q[3][3];
     double m_T[3][3];
