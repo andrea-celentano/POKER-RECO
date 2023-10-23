@@ -435,7 +435,7 @@ jerror_t JEventSourceEvioDAQ::GetObjects(JEvent &event, JFactory_base *factory) 
 									hit->m_channel.slot = decdata[loop].slot;
 									hit->m_channel.channel = decdata[loop].channel;
 									for (int isample = 0; isample < decdata[loop].samples.size(); isample++) {
-										hit->samples.push_back(decdata[loop].samples[isample]);
+										hit->samplesRaw.push_back(decdata[loop].samples[isample]);
 									}
 
 									hit->trigger = decdata[loop].trigger;

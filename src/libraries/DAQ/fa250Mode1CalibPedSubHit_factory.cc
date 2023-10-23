@@ -50,7 +50,7 @@ jerror_t fa250Mode1CalibPedSubHit_factory::evnt(JEventLoop *loop, uint64_t event
 	vector<double> DAQdata, PARMSdata;
 	double pedestal, RMS;
 	double sample = 0;
-
+	int sampleRaw=0;
 	TranslationTable::csc_t index;
 
 	//First get and process fa250Mode1Hit from JLab FADC
@@ -84,10 +84,10 @@ jerror_t fa250Mode1CalibPedSubHit_factory::evnt(JEventLoop *loop, uint64_t event
 
 		if (dT==0) dT=4; //retro-compatibility
 
-		for (uint32_t j = 0; j < hit->samples.size(); j++) {  //j=0
-			sample = (double) hit->samples[j]; //get the sample
-			CalibPedSubHit->samplesRaw.push_back(sample);
-			sample = sample - pedestal; //subtract the pedestal (in FADC units)
+		for (uint32_t j = 0; j < hit->samplesRaw.size(); j++) {  //j=0
+			sampleRaw =  hit->samplesRaw[j]; //get the sample
+			CalibPedSubHit->samplesRaw.push_back(sampleRaw);
+			sample = 1.*sampleRaw - pedestal; //subtract the pedestal (in FADC units)
 			sample = sample * LSB; //convert to mV
 			CalibPedSubHit->samples.push_back(sample);
 		}
@@ -124,10 +124,10 @@ jerror_t fa250Mode1CalibPedSubHit_factory::evnt(JEventLoop *loop, uint64_t event
 		LSB = PARMSdata[0];
 		dT = PARMSdata[1];
 
-		for (uint32_t j = 0; j < hit->samples.size(); j++) {  //j=0
-			sample = (double) hit->samples[j]; //get the sample
-		  CalibPedSubHit->samplesRaw.push_back(sample);
-			sample = sample - pedestal; //subtract the pedestal (in FADC units)
+		for (uint32_t j = 0; j < hit->samplesRaw.size(); j++) {  //j=0
+			sampleRaw =  hit->samplesRaw[j]; //get the sample
+		  CalibPedSubHit->samplesRaw.push_back(sampleRaw);
+			sample = 1.*sampleRaw - pedestal; //subtract the pedestal (in FADC units)
 			sample = sample * LSB; //convert to mV
 
 			CalibPedSubHit->samples.push_back(sample);

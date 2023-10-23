@@ -189,11 +189,11 @@ jerror_t JEventSourceTRIDASDAQ::GetObjects(JEvent & event, JFactory_base * facto
 			 */
 			auto firstSample = *(hit.begin());
 			for (int ii = 0; ii < Ndelay; ii++) {
-				fahit->samples.push_back(firstSample);
+				fahit->samplesRaw.push_back(firstSample);
 			}
 
 			for (auto it_ptSample = hit.begin(); it_ptSample != hit.end(); it_ptSample++) {
-				fahit->samples.push_back(*it_ptSample);
+				fahit->samplesRaw.push_back(*it_ptSample);
 			}
 
 			data.push_back(fahit);

@@ -141,7 +141,7 @@ jerror_t CalorimeterRawDataHit_factory::evnt(JEventLoop *loop, uint64_t eventnum
             m_CalorimeterRawDataHit->Qraw = Q;
 
             m_CalorimeterRawDataHit->A = A;
-            m_CalorimeterRawDataHit->Araw = Araw;
+
             m_CalorimeterRawDataHit->T = T;
             m_CalorimeterRawDataHit->Q = Q;
 

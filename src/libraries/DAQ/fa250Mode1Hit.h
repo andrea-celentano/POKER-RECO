@@ -24,7 +24,7 @@ public:
 	virtual ~fa250Mode1Hit();
 
 	vector<double> samples;
-	vector<double> samplesRaw;
+	vector<int> samplesRaw;
 
 	// This method is used primarily for pretty printing
 	// the second argument to AddString is printf style format

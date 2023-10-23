@@ -60,7 +60,6 @@ jerror_t CalorimeterDigiHit_factory::evnt(JEventLoop *loop,
 		m_CalorimeterDigiHit->Q = m_CalorimeterRawDataHit->Q;
 		m_CalorimeterDigiHit->T = m_CalorimeterRawDataHit->T;
 		m_CalorimeterDigiHit->A = m_CalorimeterRawDataHit->A;
-    m_CalorimeterDigiHit->Araw = m_CalorimeterRawDataHit->Araw;
 		m_CalorimeterDigiHit->pedMean = m_CalorimeterRawDataHit->pedMean;
 		m_CalorimeterDigiHit->pedRMS = m_CalorimeterRawDataHit->pedRMS;
 		m_CalorimeterDigiHit->RMSflag = m_CalorimeterRawDataHit->RMSflag;
